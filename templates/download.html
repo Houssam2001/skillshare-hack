@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeckerNoHecking</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+</head>
+<body>
+  <div class="me">
+        <a href="https://replit.com/@HeckerNoHecking">
+            @HeckerNoHecking
+        </a>
+    </div>
+    <div class="cont">
+      <center>
+        <img class="thumb" src="{{thumb}}">
+      </center>
+      <center>
+        <p class="title">{{title}}</p>
+      </center>
+      <div class="linkcont">
+        {% for i in vid_links %}
+          <span>{{"0"if vid_links.index(i)<9}}{{vid_links.index(i)+1}} - <a href="play?id={{i}}" class="download_link">{{vid_names[vid_links.index(i)]}}</a></span>
+        {% endfor %}
+      </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

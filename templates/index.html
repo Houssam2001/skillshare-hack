@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeckerNoHecking</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/home.css') }}">
+</head>
+<body>
+  <div class="me">
+    <a href="https://replit.com/@HeckerNoHecking">
+      @HeckerNoHecking
+    </a>
+  </div>
+  <div class="cont" style="text-align: center;">
+    <center>
+      <p class="title">HECK SKILLSHARE?</p>
+    </center>
+
+    <center>
+      <div>
+        <p>001. &nbsp;&nbsp; Head over to <a href="https://skillshare.com/classes/">https://skillshare.com/classes/</a></p>
+        <p>002. &nbsp;&nbsp; Select a course, copy the course link</p>
+        <p>003. &nbsp;&nbsp; Paste the link below and heck it!</p>
+        <p style="opacity: 0.3; font-size: 85%;margin-top: 10px;">
+          (Takes a while to load)
+        </p><br>
+      </div>
+    </center>
+    
+
+
+    <div class="" style="font-family: 'Roboto Condensed', sans-serif !important">
+      <form action="{{ url_for('heckURL')}}" method="POST">
+        <label for="url"></label>
+        <input name="url" class="spb" type="text" placeholder="https://skillshare.com/classes/...."><br>
+        <input class="heckbtn" type="submit" value="HECK">
+      </form>
+    </div>
+
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

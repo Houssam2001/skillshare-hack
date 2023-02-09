@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Staatliches', cursive;
+  font-size: 20px;
+  word-wrap: break-word;
+}
+
+body {
+  background-color: #0c0c0c;
+  background-image:
+    linear-gradient(rgb(26, 26, 26) 2px, transparent 2px),
+    linear-gradient(90deg, rgb(26, 26, 26) 3px, transparent 2px),
+    linear-gradient(rgb(26, 26, 26) 0.1px, transparent 2px),
+    linear-gradient(90deg, rgb(26, 26, 26) 0.1px, transparent 2px);
+  background-size: 80px 80px, 80px 80px, 20px 20px, 20px 20px;
+  background-position: -200px -200px, -200px -200px, -100px -100px, -100px -100px;
+  color: #f7f7e7;
+  display: flex;
+  justify-content: center;
+}
+
+.cont {
+  max-width: 550px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+span p{
+  background: rgb(18, 167, 105);
+  width: 150px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.vcent {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btn{
+  background: transparent;
+  color: #f7f7e7;
+  padding: 10px;
+  border: 1.5px solid rgb(18, 167, 105);
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 'Staatliches', cursive;
+  transition: 0.3s;
+  margin: 10px;
+}
+
+.btn:hover{
+  background: rgb(18, 167, 105);
+  color: #f7f7e7;
+}
+
+.thumb {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  margin: 80px 0 30px 0;
+  padding: 5px;
+  border: 3px solid rgb(18, 167, 105);
+}
+
+.title{
+  text-transform: uppercase;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.linkcont{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 0 20px 80px 20px;
+  text-align: left;
+}
+
+
+.download_link {
+  color: #f7f7e7;
+  border-bottom: 1.5px solid rgb(18, 167, 105);
+  text-decoration: none;
+  line-height: 40px;
+}
+
+.download_link:hover {
+  text-decoration: none;
+  border-bottom: 1.5px solid #f7f7e7;
+}
+
+.me{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 250px;
+  height: 40px;
+  background-color: rgba(18, 167, 105, 0.274);
+  display: grid;
+  place-items: center;
+  border-top-left-radius: 10px;
+}
+
+.me a{
+  color: #f7f7e7;
+  letter-spacing: 3px;
+  text-decoration: none;
+}
+
+.me a:hover{
+  opacity: 0.5;
+}

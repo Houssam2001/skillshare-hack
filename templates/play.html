@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeckerNoHecking</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr-playback-rate-plugin@latest/lib/clappr-playback-rate-plugin.min.js">
+</script>
+</head>
+
+<body>
+    <div class="me">
+        <a href="https://replit.com/@HeckerNoHecking">
+            @HeckerNoHecking
+        </a>
+    </div>
+    <div class="cont vcent">
+            <div id="player" style="width: 90vw; max-width: 550px; margin-bottom: 30px;"></div>
+            <script>
+                var url_string = window.location;
+                var url = new URL(url_string);
+                var play_id = url.searchParams.get("id");
+                var player = new Clappr.Player({
+                    source: play_id,
+                    parentId: "#player",
+                    autoPlay: true,
+                    width: '100%',
+                    height: '350px',
+                    mediacontrol: {
+                        seekbar: "#12a769",
+                        buttons: "#f7f7e7"
+                    },
+                    plugins: [
+                        PlaybackRatePlugin
+                    ],
+                    playbackRateConfig: {
+                        defaultValue: 1,
+                        options: [{
+                                value: 0.25,
+                                label: '0.25x'
+                            },
+                            {
+                                value: 0.5,
+                                label: '0.5x'
+                            },
+                            {
+                                value: 1,
+                                label: '1x'
+                            },
+                            {
+                                value: 1.5,
+                                label: '1.5x'
+                            },
+                            {
+                                value: 2,
+                                label: '2x'
+                            },
+                        ],
+                    },
+                });
+            </script>
+            <script>
+                document.write('<div><a class="btn" href="#" onclick="history.back(-1)"><i style="margin-right: 5px;" class="fal fa-arrow-left"></i> Go Back</a><a class="btn" href="' + play_id + '">Download <i style="margin-left: 5px;" class="fal fa-arrow-down"></i></a></div>');
+            </script>
+            
+    </div>
+</body>
+
+</html>
